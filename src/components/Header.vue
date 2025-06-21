@@ -27,7 +27,7 @@
   <script setup>
   import { ref } from 'vue'
   
-  const developerName = ref('John Doe')
+  const developerName = ref('Shaheer Siddiqi')
   const isMenuOpen = ref(false)
   
   const toggleMenu = () => {
