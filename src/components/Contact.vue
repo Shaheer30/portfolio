@@ -10,25 +10,25 @@
 
                     <div class="contact-methods">
                         <div class="contact-method">
-                            <MailIcon :size="24" />
-                            <div>
+                            <div class="method-header">
+                                <MailIcon :size="20" />
                                 <h4>Email</h4>
-                                <p>{{ contactInfo.email }}</p>
                             </div>
+                            <p>{{ contactInfo.email }}</p>
                         </div>
                         <div class="contact-method">
-                            <PhoneIcon :size="24" />
-                            <div>
+                            <div class="method-header">
+                                <PhoneIcon :size="20" />
                                 <h4>Phone</h4>
-                                <p>{{ contactInfo.phone }}</p>
                             </div>
+                            <p>{{ contactInfo.phone }}</p>
                         </div>
                         <div class="contact-method">
-                            <MapPinIcon :size="24" />
-                            <div>
+                            <div class="method-header">
+                                <MapPinIcon :size="20" />
                                 <h4>Location</h4>
-                                <p>{{ contactInfo.location }}</p>
                             </div>
+                            <p>{{ contactInfo.location }}</p>
                         </div>
                     </div>
 
@@ -228,18 +228,28 @@ const submitForm = async (event) => {
 
 .contact-method {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.contact-method h4 {
+.method-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.method-header h4 {
     font-size: 1.1rem;
-    margin-bottom: 0.25rem;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
 }
 
 .contact-method p {
     margin: 0;
+    margin-left: 2.75rem; /* Align with text after icon + gap */
     opacity: 0.8;
+    font-size: 1rem;
 }
 
 .social-links {
@@ -370,7 +380,16 @@ const submitForm = async (event) => {
     }
 
     .contact-method {
+        align-items: center;
+    }
+
+    .method-header {
         justify-content: center;
+    }
+
+    .contact-method p {
+        margin-left: 0;
+        text-align: center;
     }
 
     .social-links {
