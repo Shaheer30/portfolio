@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Shaheer Siddiq. All rights reserved.</p>
+          <p>&copy; 2025 Shaheer Siddiqi. All rights reserved.</p>
         </div>
       </div>
     </footer>
