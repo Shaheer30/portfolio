@@ -229,6 +229,13 @@ const profileImage = ref('/placeholder.svg?height=300&width=300')
   }
 }
 
+/* Extra small screens */
+@media (max-width: 300px) {
+  .image-container {
+    margin-top: 20px;
+  }
+}
+
 /* Landscape mobile optimization */
 @media (max-height: 600px) and (orientation: landscape) {
   .hero {
