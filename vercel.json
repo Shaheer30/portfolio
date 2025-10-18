@@ -1,20 +1,11 @@
 {
-    "redirects": [
-      {
-        "source": "/sitemap.xml",
-        "destination": "/sitemap-real.xml",
-        "permanent": true
-      }
-    ],
-    "headers": [
-      {
-        "source": "/(.*)\\.(xml|txt)$",
-        "headers": [
-          { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-          { "key": "Content-Disposition", "value": "inline" },
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
-      }
-    ]
-  }
-  
+  "headers": [
+    {
+      "source": "/(.*)\\.(xml|txt)$",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}

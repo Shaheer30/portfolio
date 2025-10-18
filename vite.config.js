@@ -2,23 +2,20 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  plugins: [vue(), vueDevTools()],
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) }
   },
   build: {
     rollupOptions: {
       input: {
-        main: fileURLToPath(new URL('./index.html', import.meta.url)),
-      },
-    },
-    copyPublicDir: true // ensures public folder files (like sitemap.xml, robots.txt) are copied
-  },
+        main: resolve(__dirname, 'index.html'),
+        sitemap: resolve(__dirname, 'public/sitemap.xml'),
+        robots: resolve(__dirname, 'public/robots.txt')
+      }
+    }
+  }
 })
