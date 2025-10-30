@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@vueuse/head": "^2.0.0",
     "bootstrap-icons": "^1.13.1",
     "lucide-vue-next": "^0.519.0",
     "vue": "^3.5.13",
