@@ -37,13 +37,7 @@
         <!-- Name Field -->
         <div class="form-group">
           <label for="name">Name <span class="required">*</span></label>
-          <input
-            v-model="form.name"
-            type="text"
-            id="name"
-            placeholder="Your name"
-            @blur="validateField('name')"
-          />
+          <input v-model="form.name" type="text" id="name" placeholder="Your name" @blur="validateField('name')" />
           <span v-if="errors.name" class="error-message">{{
             errors.name
           }}</span>
@@ -52,13 +46,8 @@
         <!-- Email Field -->
         <div class="form-group">
           <label for="email">Email <span class="required">*</span></label>
-          <input
-            v-model="form.email"
-            type="email"
-            id="email"
-            placeholder="your.email@example.com"
-            @blur="validateField('email')"
-          />
+          <input v-model="form.email" type="email" id="email" placeholder="your.email@example.com"
+            @blur="validateField('email')" />
           <span v-if="errors.email" class="error-message">{{
             errors.email
           }}</span>
@@ -67,13 +56,8 @@
         <!-- Company Field -->
         <div class="form-group">
           <label for="company">Company <span class="required">*</span></label>
-          <input
-            v-model="form.company"
-            type="text"
-            id="company"
-            placeholder="Your company name"
-            @blur="validateField('company')"
-          />
+          <input v-model="form.company" type="text" id="company" placeholder="Your company name"
+            @blur="validateField('company')" />
           <span v-if="errors.company" class="error-message">{{
             errors.company
           }}</span>
@@ -82,13 +66,8 @@
         <!-- Subject Field -->
         <div class="form-group">
           <label for="subject">Subject <span class="required">*</span></label>
-          <input
-            v-model="form.subject"
-            type="text"
-            id="subject"
-            placeholder="Message subject"
-            @blur="validateField('subject')"
-          />
+          <input v-model="form.subject" type="text" id="subject" placeholder="Message subject"
+            @blur="validateField('subject')" />
           <span v-if="errors.subject" class="error-message">{{
             errors.subject
           }}</span>
@@ -96,20 +75,11 @@
 
         <!-- Services Checkboxes -->
         <div class="form-group">
-          <label class="services-label"
-            >Services Interested In <span class="required">*</span></label
-          >
+          <label class="services-label">Services Interested In <span class="required">*</span></label>
           <div class="checkbox-group">
-            <label
-              v-for="service in services"
-              :key="service.id"
-              class="checkbox-label"
-            >
-              <input
-                type="checkbox"
-                :checked="form.services.includes(service.id)"
-                @change="toggleService(service.id)"
-              />
+            <label v-for="service in services" :key="service.id" class="checkbox-label">
+              <input type="checkbox" :checked="form.services.includes(service.id)"
+                @change="toggleService(service.id)" />
               <span>{{ service.label }}</span>
             </label>
           </div>
@@ -121,13 +91,8 @@
         <!-- Message Field -->
         <div class="form-group">
           <label for="message">Message <span class="required">*</span></label>
-          <textarea
-            v-model="form.message"
-            id="message"
-            rows="6"
-            placeholder="Your message..."
-            @blur="validateField('message')"
-          ></textarea>
+          <textarea v-model="form.message" id="message" rows="6" placeholder="Your message..."
+            @blur="validateField('message')"></textarea>
           <span v-if="errors.message" class="error-message">{{
             errors.message
           }}</span>
@@ -316,6 +281,95 @@ const submitForm = async () => {
     isSubmitting.value = false;
   }
 };
+
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Hire a Full-Stack Web Developer | Laravel & Livewire Expert",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Contact Shaheer Siddiqi, a Pakistan-based full-stack developer skilled in Laravel, Livewire, MySQL, and responsive web design to discuss your next project.",
+    },
+    {
+      name: "keywords",
+      content:
+        "contact full stack developer, hire web developer, seo consultant contact, web design quote, freelance developer contact",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://shaheer-siddiqi.vercel.app/contact#webpage",
+            "url": "https://shaheer-siddiqi.vercel.app/contact",
+            "name": "Contact | Shaheer Siddiqi",
+            "description": "Contact Shaheer Siddiqi for web development and digital marketing services.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "url": "https://shaheer-siddiqi.vercel.app/",
+              "name": "Shaheer Siddiqi"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://shaheer-siddiqi.vercel.app/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://shaheer-siddiqi.vercel.app/contact"
+                }
+              ]
+            },
+            "mainEntity": {
+              "@type": "ContactPage",
+              "name": "Get in Touch with Shaheer Siddiqi",
+              "about": "Contact information and form for Shaheer Siddiqi.",
+              "contactType": "Sales and Support",
+              "image": "https://shaheer-siddiqi.vercel.app/images/contact-image.png"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://shaheer-siddiqi.vercel.app/#organization",
+            "name": "Shaheer Siddiqi - Web Developer",
+            "url": "https://shaheer-siddiqi.vercel.app/",
+            "logo": "https://shaheer-siddiqi.vercel.app/images/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+923078485757", // Replace with your actual phone number
+              "email": "shaheersiddiqi20@gmail.com",
+              "contactType": "Customer Service"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://shaheer-siddiqi.vercel.app/#person",
+            "name": "Shaheer Siddiqi",
+            "url": "https://shaheer-siddiqi.vercel.app/",
+            "jobTitle": "Full Stack Web Developer & Digital Marketing Specialist",
+            "alumniOf": "The University of Lahore",
+            "sameAs": [
+              "https://www.linkedin.com/in/shaheersiddiqi/",
+              "https://github.com/ShaheerSiddiqi"
+            ]
+          }
+        ]
+      })
+    }
+  ]
+});
 </script>
 
 <style scoped>
@@ -397,6 +451,7 @@ const submitForm = async () => {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

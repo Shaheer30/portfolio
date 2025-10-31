@@ -2,17 +2,17 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "UAE Marketing Agency | Digital Marketing Company in Abu Dhabi",
+  title: "Shaheer Siddiqi | Full Stack Web Developer & Digital Marketing Specialist",
   meta: [
     {
       name: "description",
       content:
-        "UAE MARKETING AGENCY is a top-rated digital marketing company in Abu Dhabi offering SEO, PPC, social media, and web development for UAE businesses.",
+        "Full-stack developer specializing in Laravel, Livewire, & MySQL for scalable apps. Serving clients in the US, Canada, UK/EU, & UAE with custom solutions.",
     },
     {
       name: "keywords",
       content:
-        "seo services, seo agency, seo optimization service, local seo agency, website development, website developement company, website developement agency, web dev, website developers, google my business, mybusiness, google my business management, graphic designing, graphic designer near me, graphic, seo content writer, web content writer, google ads manager, google compaign manager, meta ads manager, search engine marketing, sem agency, guest post, seo ai optimization, google business profile, gmb ranking, digital marketing,  digital marketing agency,  digital marketing services, marketing agency near me",
+        "full stack web developer, seo specialist, google ads manager, next.js, laravel, vue.js, freelance web developer, digital marketing agency, international seo services",
     },
   ],
   script: [

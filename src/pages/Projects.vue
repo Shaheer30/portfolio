@@ -1,3 +1,145 @@
+<script setup>
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Web Developer Portfolio | Projects & Case Studies",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Explore Shaheer Siddiqi’s project showcase—full-stack web developer from Pakistan specializing in Laravel, Livewire, MySQL, and responsive web design.",
+    },
+    {
+      name: "keywords",
+      content:
+        "web development projects, nextjs portfolio, react projects, full stack development, seo case studies, digital marketing portfolio",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://shaheer-siddiqi.vercel.app/projects#webpage",
+            "url": "https://shaheer-siddiqi.vercel.app/projects",
+            "name": "Projects | Shaheer Siddiqi - Full Stack Web Developer Portfolio",
+            "description": "A portfolio showcasing professional web development projects, SEO implementations, and digital marketing campaigns by Shaheer Siddiqi.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "url": "https://shaheer-siddiqi.vercel.app/",
+              "name": "Shaheer Siddiqi"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://shaheer-siddiqi.vercel.app/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Projects",
+                  "item": "https://shaheer-siddiqi.vercel.app/projects"
+                }
+              ]
+            },
+            "mainEntity": {
+              "@type": "CollectionPage",
+              "name": "Shaheer Siddiqi's Portfolio Projects",
+              "mainEntityOfPage": "https://shaheer-siddiqi.vercel.app/projects",
+              "about": "A curated collection of web development and digital marketing projects.",
+              "hasPart": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "Project Name Example",
+                  "description": "A brief description of the project, technologies used, and the problem solved.",
+                  "url": "https://shaheer-siddiqi.vercel.app/projects/project-slug",
+                  "image": "https://shaheer-siddiqi.vercel.app/images/project-name-thumbnail.png",
+                  "keywords": ["React", "Next.js", "Full Stack", "Web Development"],
+                  "creator": {
+                    "@type": "Person",
+                    "@id": "https://shaheer-siddiqi.vercel.app/#person",
+                    "name": "Shaheer Siddiqi"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://shaheer-siddiqi.vercel.app/projects#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What technologies are used in your projects?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "My projects primarily utilize modern web technologies including Next.js, React, Node.js, and various databases (MongoDB, PostgreSQL). I also focus on headless CMS integration and cloud services like Vercel and AWS."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I view the source code for these projects?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For client confidentiality, full source code is not public. However, I often provide links to live demos and, for personal projects, a link to the GitHub repository is available."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you only work on front-end development?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, I am a full-stack developer. My work includes front-end implementation, back-end API development, database management, and cloud deployment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I start a project with you?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can start by contacting me through the contact form on the website or by emailing me directly at shaheersiddiqi20@gmail.com to discuss your project requirements and scope."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://shaheer-siddiqi.vercel.app/#organization",
+            "name": "Shaheer Siddiqi - Web Developer",
+            "url": "https://shaheer-siddiqi.vercel.app/",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+923078485757",
+              "email": "shaheersiddiqi20@gmail.com",
+              "contactType": "Customer Service"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://shaheer-siddiqi.vercel.app/#person",
+            "name": "Shaheer Siddiqi",
+            "url": "https://shaheer-siddiqi.vercel.app/",
+            "jobTitle": "Full Stack Web Developer & Digital Marketer",
+            "knowsAbout": ["Web Development", "SEO", "Google Ads", "Vue.js", "Next.js", "web designng"],
+            "sameAs": [
+              "https://www.linkedin.com/in/shaheersiddiqi/",
+              "https://github.com/ShaheerSiddiqi"
+            ]
+          }
+        ]
+      }),
+    },
+  ],
+});
+</script>
+
 <template>
   <div class="projects">
     <div class="page-header">
@@ -6,23 +148,14 @@
     </div>
 
     <div class="filters">
-      <button 
-        v-for="category in categories" 
-        :key="category"
-        @click="selectedCategory = category"
-        :class="{ active: selectedCategory === category }"
-        class="filter-btn"
-      >
+      <button v-for="category in categories" :key="category" @click="selectedCategory = category"
+        :class="{ active: selectedCategory === category }" class="filter-btn">
         {{ category }}
       </button>
     </div>
 
     <div class="projects-container">
-      <div 
-        v-for="project in filteredProjects" 
-        :key="project.id"
-        class="project-item"
-      >
+      <div v-for="project in filteredProjects" :key="project.id" class="project-item">
         <div class="project-header">
           <img :src="project.image" :alt="project.title" class="project-image" />
           <div class="project-meta">
@@ -141,6 +274,7 @@ export default {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
