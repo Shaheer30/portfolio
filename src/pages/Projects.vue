@@ -2,7 +2,7 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Web Developer Portfolio | Projects & Case Studies",
+  title: "SS Web Services Portfolio | Projects & Case Studies",
   meta: [
     {
       name: "description",
@@ -127,6 +127,8 @@ useHead({
             "name": "Shaheer Siddiqi",
             "url": "https://shaheer-siddiqi.vercel.app/",
             "jobTitle": "Full Stack Web Developer & Digital Marketer",
+            "alumniOf": "SS Web Services",
+            "company": "SS Web Services",
             "knowsAbout": ["Web Development", "SEO", "Google Ads", "Vue.js", "Next.js", "web designng"],
             "sameAs": [
               "https://www.linkedin.com/in/shaheersiddiqi/",
@@ -362,6 +364,8 @@ export default {
 
 .project-image {
   border-radius: 15px;
+  max-width: 100%;
+  height: auto;
 }
 
 .project-meta {
@@ -470,9 +474,55 @@ export default {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
   .page-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .project-header {
+    padding: 2.5rem 2rem;
+  }
+
+  .project-content {
+    padding: 2rem;
+  }
+
+  .project-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .filters {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .projects-container {
+    gap: 2rem;
   }
 
   .project-item {
@@ -481,6 +531,11 @@ export default {
 
   .project-header {
     padding: 2rem;
+    min-height: 250px;
+  }
+
+  .project-image {
+    max-width: 200px;
   }
 
   .project-content {
@@ -488,7 +543,116 @@ export default {
   }
 
   .project-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-details {
+    margin: 1rem 0;
+  }
+
+  .detail {
+    margin-bottom: 0.75rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .tech {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .project-links {
+    margin-top: 1rem;
+  }
+
+  .link-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .project-meta {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .category-badge,
+  .year-badge {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Small Mobile Breakpoint */
+@media (max-width: 480px) {
+  .page-title {
     font-size: 1.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .projects-container {
+    gap: 1.5rem;
+  }
+
+  .project-header {
+    padding: 1.5rem;
+    min-height: 200px;
+  }
+
+  .project-image {
+    max-width: 160px;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-details {
+    margin: 0.75rem 0;
+  }
+
+  .tech-stack {
+    gap: 0.35rem;
+  }
+
+  .tech {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .link-btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
   }
 }
 </style>

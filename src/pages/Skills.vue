@@ -2,7 +2,7 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Web Developer Skillset | Laravel, Livewire, Front-End & Database",
+  title: "SS Web Developer Skillset | Laravel, Livewire, Front-End & Database",
   meta: [
     {
       name: "description",
@@ -68,7 +68,8 @@ useHead({
             "name": "Shaheer Siddiqi",
             "url": "https://shaheer-siddiqi.vercel.app/",
             "jobTitle": "Full Stack Web Developer & Digital Marketing Specialist",
-            "alumniOf": "The University of Lahore",
+            "alumniOf": "SS Web Services",
+            "company": "SS Web Services",
             "knowsAbout": [
               "Web Development",
               "Web Designing",

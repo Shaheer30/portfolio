@@ -2,7 +2,7 @@
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Shaheer Siddiqi | Full Stack Web Developer & Digital Marketing Specialist",
+  title: "Shaheer Siddiqi | Full Stack Web Developer | SS Web Services",
   meta: [
     {
       name: "description",
@@ -272,6 +272,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
+
 .home {
   animation: fadeIn 0.6s ease-in;
 }
@@ -327,18 +331,21 @@ export default {
 .stat {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .stat-number {
   font-size: 2rem;
   font-weight: 700;
   color: #1a1a1a;
+  word-wrap: break-word;
 }
 
 .stat-label {
   font-size: 0.9rem;
   color: #666;
   margin-top: 0.5rem;
+  word-wrap: break-word;
 }
 
 .hero-buttons {
@@ -358,6 +365,7 @@ export default {
   display: inline-block;
   cursor: pointer;
   border: none;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -389,6 +397,7 @@ export default {
   color: #1a1a1a;
   margin: 3rem 0 2rem 0;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .featured-projects {
@@ -408,7 +417,7 @@ export default {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-
+  min-width: 0;
 }
 
 .project-card:hover {
@@ -416,15 +425,18 @@ export default {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
-.project-image {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.project-card img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .project-card h3 {
   font-size: 1.5rem;
   color: #1a1a1a;
   margin: 1rem 0;
+  word-wrap: break-word;
 }
 
 .project-category {
@@ -439,6 +451,7 @@ export default {
   color: #666;
   line-height: 1.6;
   margin: 0 0 1rem 0;
+  word-wrap: break-word;
 }
 
 .project-tags {
@@ -454,6 +467,7 @@ export default {
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 .view-more {
@@ -462,6 +476,7 @@ export default {
   display: inline-block;
   transition: transform 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .project-card:hover .view-more {
@@ -486,6 +501,7 @@ export default {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   cursor: pointer;
+  min-width: 0;
 }
 
 .service-card:hover {
@@ -502,12 +518,14 @@ export default {
   font-size: 1.5rem;
   color: #1a1a1a;
   margin: 1rem 0;
+  word-wrap: break-word;
 }
 
 .service-card p {
   color: #666;
   line-height: 1.6;
   margin: 0 0 1rem 0;
+  word-wrap: break-word;
 }
 
 .read-more {
@@ -540,6 +558,7 @@ export default {
   transition: all 0.3s ease;
   cursor: pointer;
   border-left: 4px solid #1a1a1a;
+  min-width: 0;
 }
 
 .blog-preview-card:hover {
@@ -551,6 +570,7 @@ export default {
   font-size: 1.3rem;
   color: #1a1a1a;
   margin: 0 0 0.5rem 0;
+  word-wrap: break-word;
 }
 
 .blog-date {
@@ -563,6 +583,7 @@ export default {
   color: #666;
   line-height: 1.6;
   margin: 0 0 1rem 0;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
@@ -590,11 +611,96 @@ export default {
   }
 }
 
-.projects-grid img {
-  border-radius: 12px;
-}
+/* Extra small devices (375px and below) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 2rem 0;
+  }
 
-.projects-grid a {
-  text-decoration: none;
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .hero-buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  .featured-projects,
+  .featured-services {
+    margin: 2rem 0;
+  }
+
+  .projects-grid,
+  .services-grid {
+    gap: 1rem;
+  }
+
+  .project-card,
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .project-card h3,
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin: 0.75rem 0;
+  }
+
+  .project-card p,
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-category {
+    font-size: 0.75rem;
+  }
+
+  .project-tags {
+    gap: 0.35rem;
+    margin: 0.75rem 0;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .view-more {
+    font-size: 0.9rem;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
 }
 </style>

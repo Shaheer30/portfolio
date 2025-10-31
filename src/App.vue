@@ -15,7 +15,6 @@
           <li><router-link to="/projects" :class="{ active: $route.path === '/projects' }" @click="menuOpen = false">Projects</router-link></li>
           <li><router-link to="/skills" :class="{ active: $route.path === '/skills' }" @click="menuOpen = false">Skills</router-link></li>
           <li><router-link to="/services" :class="{ active: $route.path === '/services' }" @click="menuOpen = false">Services</router-link></li>
-          <!-- <li><router-link to="/blogs" :class="{ active: $route.path === '/blogs' }" @click="menuOpen = false">Blog</router-link></li> -->
           <li><router-link to="/contact" :class="{ active: $route.path === '/contact' }" @click="menuOpen = false">Contact</router-link></li>
         </ul>
       </div>
@@ -27,7 +26,6 @@
 
     <footer class="footer">
       <div class="footer-content">
-        <!-- Updated about section with better description -->
         <div class="footer-section">
           <img src="/images/logo-footer.png" alt="Full Stack Dev Portfolio logo" />
           <p>
@@ -35,7 +33,6 @@
           </p>
         </div>
 
-        <!-- Added contact details column -->
         <div class="footer-section">
           <h4>Contact Details</h4>
           <div class="contact-details">
@@ -66,15 +63,17 @@
           </ul>
         </div>
 
-        <!-- Replaced text social links with professional social icons -->
         <div class="footer-section">
           <h4>Connect With Me</h4>
           <div class="social-links">
             <a href="https://github.com/Shaheer30" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
               <i class="bi bi-github"></i>
             </a>
-            <a href="www.linkedin.com/in/shaheer-alam-siddiqui-5a916b281" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/shaheer-alam-siddiqui-5a916b281/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
               <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://share.google/iPJBltAjkuGVUgziN" target="_blank" rel="noopener noreferrer" class="social-icon" title="GMB">
+              <i class="bi bi-google"></i>
             </a>
           </div>
         </div>
@@ -103,11 +102,16 @@ export default {
 </script>
 
 <style scoped>
+* {
+  box-sizing: border-box;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: #f8f9fa;
+  width: 100%;
 }
 
 .navbar {
@@ -116,6 +120,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .nav-container {
@@ -125,6 +130,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -133,9 +140,17 @@ export default {
   color: #1a1a1a;
   text-decoration: none;
   letter-spacing: -0.5px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-/* Added hamburger menu button styles */
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .nav-toggler {
   display: none;
   flex-direction: column;
@@ -144,6 +159,7 @@ export default {
   cursor: pointer;
   padding: 0.5rem;
   gap: 0.4rem;
+  flex-shrink: 0;
 }
 
 .nav-toggler span {
@@ -172,6 +188,7 @@ export default {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .nav-links a {
@@ -181,6 +198,7 @@ export default {
   font-size: 0.95rem;
   transition: color 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -207,6 +225,7 @@ export default {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .footer {
@@ -214,6 +233,8 @@ export default {
   color: #ffffff;
   padding: 3rem 2rem 1rem;
   margin-top: 4rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
@@ -223,6 +244,12 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-section {
+  min-width: 0;
 }
 
 .footer-section h4 {
@@ -235,6 +262,13 @@ export default {
   color: #aaa;
   line-height: 1.6;
   font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+.footer-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .footer-links {
@@ -251,6 +285,7 @@ export default {
   color: #aaa;
   text-decoration: none;
   transition: color 0.3s ease;
+  word-wrap: break-word;
 }
 
 .footer-links a:hover {
@@ -275,11 +310,7 @@ export default {
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.social-icon svg {
-  width: 20px;
-  height: 20px;
+  flex-shrink: 0;
 }
 
 .social-icon:hover {
@@ -298,16 +329,19 @@ export default {
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .contact-icon {
   font-size: 1.5rem;
   min-width: 30px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .contact-item div {
   flex: 1;
+  min-width: 0;
 }
 
 .contact-label {
@@ -325,6 +359,8 @@ export default {
   font-size: 0.95rem;
   margin: 0;
   transition: color 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-item a:hover {
@@ -334,25 +370,24 @@ export default {
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding: 2rem 2rem 0;
   border-top: 1px solid #333;
   text-align: center;
   color: #666;
   font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: row;
-    gap: 0;
+    padding: 1rem 1.5rem;
   }
 
-  /* Show hamburger menu on mobile */
   .nav-toggler {
     display: flex;
   }
 
-  /* Mobile menu styles with smooth animation */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -361,11 +396,12 @@ export default {
     background-color: #ffffff;
     flex-direction: column;
     gap: 0;
-    padding: 1rem 2rem;
+    padding: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    width: 100%;
   }
 
   .nav-links.open {
@@ -373,8 +409,10 @@ export default {
   }
 
   .nav-links li {
-    padding: 0.75rem 0;
+    padding: 0.75rem 1.5rem;
     border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .nav-links li:last-child {
@@ -383,6 +421,7 @@ export default {
 
   .nav-links a {
     display: block;
+    white-space: normal;
   }
 
   .nav-links a.active::after {
@@ -399,7 +438,15 @@ export default {
   }
 
   .main-content {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+
+  .footer-bottom {
+    padding: 2rem 1.5rem 0;
   }
 
   .contact-item {
@@ -415,9 +462,95 @@ export default {
     height: 36px;
   }
 
+  .social-icon i,
   .social-icon svg {
     width: 18px;
     height: 18px;
+  }
+}
+
+/* Extra small devices (375px and below) */
+@media (max-width: 375px) {
+  .nav-container {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .logo img {
+    max-width: 200px;
+  }
+
+  .nav-toggler {
+    padding: 0.35rem;
+  }
+
+  .nav-toggler span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav-links li {
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .main-content {
+    padding: 1rem 1rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem 0.75rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  .footer-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon i,
+  .social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-bottom {
+    padding: 1.5rem 1rem 0;
+    font-size: 0.8rem;
   }
 }
 </style>

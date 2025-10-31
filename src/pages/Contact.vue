@@ -285,7 +285,7 @@ const submitForm = async () => {
 import { useHead } from "@vueuse/head";
 
 useHead({
-  title: "Hire a Full-Stack Web Developer | Laravel & Livewire Expert",
+  title: "Hire a Full-Stack Web Developer | Laravel & Livewire Expert | SS Web Services",
   meta: [
     {
       name: "description",
@@ -359,7 +359,8 @@ useHead({
             "name": "Shaheer Siddiqi",
             "url": "https://shaheer-siddiqi.vercel.app/",
             "jobTitle": "Full Stack Web Developer & Digital Marketing Specialist",
-            "alumniOf": "The University of Lahore",
+            "alumniOf": "SS Web Services",
+            "company": "SS Web Services",
             "sameAs": [
               "https://www.linkedin.com/in/shaheersiddiqi/",
               "https://github.com/ShaheerSiddiqi"
