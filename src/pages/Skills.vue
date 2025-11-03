@@ -139,6 +139,37 @@ useHead({
         </div>
       </div>
     </section>
+
+    <section class="cta-section">
+      <div class="cta-container">
+        <!-- Main Heading -->
+        <h2 class="cta-heading">
+          Ready to Bring Your Ideas to Life?
+        </h2>
+
+        <!-- Description -->
+        <p class="cta-description">
+          Let's collaborate to create stunning, scalable web experiences that drive results for your business. Whether
+          you
+          need a new project or want to enhance an existing one, I'm here to help.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+          <a href="tel:+923078485757" class="btn btn-primary">
+            Start Your Project
+          </a>
+          <router-link to="/contact" class="btn btn-secondary">
+            Schedule a Consultation
+          </router-link>
+        </div>
+
+        <!-- Additional Info -->
+        <p class="cta-info">
+          💬 Response within 24 hours • No obligation • Free initial consultation
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -425,5 +456,92 @@ export default {
   .expertise-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.cta-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 80px 16px;
+}
+
+.cta-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .cta-heading {
+    font-size: 3rem;
+  }
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  margin-bottom: 32px;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cta-info {
+  font-size: 0.875rem;
+  color: #9ca3af;
 }
 </style>

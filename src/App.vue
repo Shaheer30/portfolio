@@ -37,14 +37,14 @@
           <h4>Contact Details</h4>
           <div class="contact-details">
             <div class="contact-item">
-              <span class="contact-icon">📧</span>
+              <span class="contact-icon"><i class="bi bi-envelope-at"></i></span>
               <div>
                 <p class="contact-label">Email</p>
                 <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a>
               </div>
             </div>
             <div class="contact-item">
-              <span class="contact-icon">📱</span>
+              <span class="contact-icon"><i class="bi bi-telephone-inbound"></i></span>
               <div>
                 <p class="contact-label">Phone</p>
                 <a href="tel:+923078485757">+92 (307) 848-5757</a>
@@ -553,4 +553,5 @@ export default {
     font-size: 0.8rem;
   }
 }
+
 </style>
