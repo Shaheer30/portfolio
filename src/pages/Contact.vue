@@ -6,14 +6,14 @@
     <div class="contact-container">
       <div class="contact-info">
         <div class="info-item">
-          <span class="info-icon">📧</span>
+          <span class="info-icon"><i class="bi bi-envelope-at"></i></span>
           <div>
             <h3>Email</h3>
             <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a>
           </div>
         </div>
         <div class="info-item">
-          <span class="info-icon">📱</span>
+          <span class="info-icon"><i class="bi bi-telephone-inbound"></i></span>
           <div>
             <h3>Phone</h3>
             <a href="tel:+923078485757">+92 (307) 848-5757</a>
