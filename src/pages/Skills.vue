@@ -162,9 +162,9 @@ export default {
           name: 'Backend Development',
           skills: [
             { name: 'Laravel', level: 68, description: 'Express, Fastify, middleware, REST APIs' },
-            { name: 'MySQL', level: 70, description: 'MongoDB, PostgreSQL, Redis, data modeling' },
-            { name: 'API Design', level: 93, description: 'RESTful APIs, API security' },
-            { name: 'Authentication', level: 91, description: 'JWT, OAuth2, session management, security' },
+            { name: 'MySQL', level: 70, description: 'Database design, queries and relationships' },
+            { name: 'API Design', level: 93, description: 'Creating and connecting REST APIs' },
+            { name: 'Authentication', level: 91, description: 'Login, register and password protection' },
           ]
         },
         {
