@@ -295,7 +295,7 @@ useHead({
     {
       name: "keywords",
       content:
-        "contact full stack developer, hire web developer, seo consultant contact, web design quote, freelance developer contact",
+        "web development, web design, fullstack dev, fullstack dev, website creators, front end developer, backend developer, website development, Graphic design, web design, graphic,website design, motion graphic, webdesigner, vector background, vector art, logo designing, graphic designing, professional logo design, custom logo design, graphic design services, website banner design, graphic design portfolio, digital marketing, SEO, web development, content marketing, social media marketing, , online courses, search engine optimization, fullstack web developer, SEO agency for small business, local SEO services near me, Google Ads management, hire content writer, web development certification, PPC services, buy guest post",
     },
   ],
   script: [
