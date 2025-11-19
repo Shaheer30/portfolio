@@ -2,7 +2,8 @@
   <div class="app">
     <nav class="navbar">
       <div class="nav-container">
-        <router-link to="/" class="logo"><img src="/images/logo.png" alt="Full Stack Dev Portfolio logo" /></router-link>
+        <router-link to="/" class="logo"><img src="/images/logo.png"
+            alt="Full Stack Dev Portfolio logo" /></router-link>
         <!-- Added hamburger menu button for mobile navigation -->
         <button class="nav-toggler" @click="toggleMenu" :class="{ active: menuOpen }">
           <span></span>
@@ -11,11 +12,16 @@
         </button>
         <!-- Added mobile menu state class -->
         <ul class="nav-links" :class="{ open: menuOpen }">
-          <li><router-link to="/" :class="{ active: $route.path === '/' }" @click="menuOpen = false">Home</router-link></li>
-          <li><router-link to="/projects" :class="{ active: $route.path === '/projects' }" @click="menuOpen = false">Projects</router-link></li>
-          <li><router-link to="/skills" :class="{ active: $route.path === '/skills' }" @click="menuOpen = false">Skills</router-link></li>
-          <li><router-link to="/services" :class="{ active: $route.path === '/services' }" @click="menuOpen = false">Services</router-link></li>
-          <li><router-link to="/contact" :class="{ active: $route.path === '/contact' }" @click="menuOpen = false">Contact</router-link></li>
+          <li><router-link to="/" :class="{ active: $route.path === '/' }" @click="menuOpen = false">Home</router-link>
+          </li>
+          <li><router-link to="/projects" :class="{ active: $route.path === '/projects' }"
+              @click="menuOpen = false">Projects</router-link></li>
+          <li><router-link to="/skills" :class="{ active: $route.path === '/skills' }"
+              @click="menuOpen = false">Skills</router-link></li>
+          <li><router-link to="/services" :class="{ active: $route.path === '/services' }"
+              @click="menuOpen = false">Services</router-link></li>
+          <li><router-link to="/contact" :class="{ active: $route.path === '/contact' }"
+              @click="menuOpen = false">Contact</router-link></li>
         </ul>
       </div>
     </nav>
@@ -40,14 +46,17 @@
               <span class="contact-icon"><i class="bi bi-envelope-at"></i></span>
               <div>
                 <p class="contact-label">Email</p>
-                <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a>
+                <p>Pakistan: <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a></p>
+                <p>Portugal: <a
+                    href="mailto:sidddigitlmarketingagency@gmail.com">sidddigitlmarketingagency@gmail.com</a></p>
               </div>
             </div>
             <div class="contact-item">
               <span class="contact-icon"><i class="bi bi-telephone-inbound"></i></span>
               <div>
                 <p class="contact-label">Phone</p>
-                <a href="tel:+923078485757">+92 (307) 848-5757</a>
+                <p>Pakistan: <a href="https://wa.me/923078485757">+92 (307) 848-5757</a></p>
+                <p>Portugal: <a href="https://wa.me/351963953931">+351 963 953 931</a></p>
               </div>
             </div>
           </div>
@@ -66,13 +75,16 @@
         <div class="footer-section">
           <h4>Connect With Me</h4>
           <div class="social-links">
-            <a href="https://github.com/Shaheer30" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+            <a href="https://github.com/Shaheer30" target="_blank" rel="noopener noreferrer" class="social-icon"
+              title="GitHub">
               <i class="bi bi-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/shaheer-alam-siddiqui-5a916b281/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/shaheer-alam-siddiqui-5a916b281/" target="_blank"
+              rel="noopener noreferrer" class="social-icon" title="LinkedIn">
               <i class="bi bi-linkedin"></i>
             </a>
-            <a href="https://share.google/iPJBltAjkuGVUgziN" target="_blank" rel="noopener noreferrer" class="social-icon" title="GMB">
+            <a href="https://share.google/iPJBltAjkuGVUgziN" target="_blank" rel="noopener noreferrer"
+              class="social-icon" title="GMB">
               <i class="bi bi-google"></i>
             </a>
           </div>
@@ -553,5 +565,4 @@ export default {
     font-size: 0.8rem;
   }
 }
-
 </style>

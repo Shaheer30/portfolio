@@ -144,6 +144,101 @@ useHead({
       </div>
     </section>
 
+    <section class="locations-section">
+      <!-- Header -->
+      <div class="section-header">
+        <h2>Our Locations</h2>
+      </div>
+
+      <!-- Now Open -->
+      <div class="locations-category">
+        <h3 class="category-title">Now Open</h3>
+        <div class="locations-grid">
+          <div v-for="location in activeLocations" :key="location.id" class="location-card">
+            <h3>{{ location.name }}</h3>
+            <div class="location-region">{{ location.region }}</div>
+
+            <!-- Address -->
+            <div class="location-info">
+              <div class="location-icon">📍</div>
+              <div class="location-content">
+                <p>{{ location.address }}</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="location-info">
+              <div class="location-icon">☎️</div>
+              <div class="location-content">
+                <a :href="'https://wa.me/' + location.whatsapp.replace(/\D/g, '')" target="_blank"
+                  rel="noopener noreferrer">{{ location.whatsapp }}</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="location-info">
+              <div class="location-icon">✉️</div>
+              <div class="location-content">
+                <a :href="'mailto:' + location.email">{{ location.email }}</a>
+              </div>
+            </div>
+
+            <!-- GMB -->
+            <div class="location-info">
+              <div class="location-icon">🌍</div>
+              <div class="location-content">
+                <a :href="location.gmb" target="_blank" rel="noopener noreferrer">Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="locations-category coming-soon">
+        <h3 class="category-title">Coming Soon</h3>
+        <div class="locations-grid">
+          <div v-for="location in inactiveLocations" :key="location.id" class="location-card">
+            <h3>{{ location.name }}</h3>
+            <div class="location-region">{{ location.region }}</div>
+
+            <!-- Address -->
+            <div class="location-info">
+              <div class="location-icon">📍</div>
+              <div class="location-content">
+                <p>{{ location.address }}</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="location-info">
+              <div class="location-icon">☎️</div>
+              <div class="location-content">
+                <a :href="'https://wa.me/' + location.whatsapp.replace(/\D/g, '')" target="_blank"
+                  rel="noopener noreferrer">{{ location.whatsapp }}</a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="location-info">
+              <div class="location-icon">✉️</div>
+              <div class="location-content">
+                <a :href="'mailto:' + location.email">{{ location.email }}</a>
+              </div>
+            </div>
+
+            <!-- GMB -->
+            <div class="location-info">
+              <div class="location-icon">🌍</div>
+              <div class="location-content">
+                <a :href="location.gmb" target="_blank" rel="noopener noreferrer">Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Added featured projects section -->
     <section class="featured-projects">
       <h2 class="section-title">Featured Projects</h2>
@@ -283,7 +378,57 @@ export default {
           date: new Date('2024-01-15'),
           excerpt: 'Learn the fundamentals of Vue 3 and how to build reactive applications...'
         },
+      ],
+      locations: [
+        {
+          id: 'portugal',
+          name: 'Portugal',
+          region: 'EU',
+          status: 'active',
+          address: 'R. Prof. Dr. Egas Moniz, 2700-628 Amadora, Portugal',
+          whatsapp: '+351 963 953 931',
+          email: 'sidddigitalmaketingagency@gmail.com',
+          gmb: 'https://share.google/5pj9L0FAiwUDsQWuK'
+        },
+        {
+          id: 'lahore',
+          name: 'Lahore',
+          region: 'Pakistan',
+          status: 'active',
+          address: 'B-6-32 Multan Rd, Eden Value Homes, Lahore, 53700',
+          whatsapp: '+92 307 8485757',
+          email: 'shaheersiddiqi20@gmail.com',
+          gmb: 'https://share.google/gzA4g502Ef7wRrDME'
+        },
+        {
+          id: 'regina',
+          name: 'Regina',
+          region: 'SK, USA & Canada',
+          status: 'inactive',
+          address: 'xxx abc Street, Regina, SK , Canada',
+          whatsapp: '+1 xxx xxx xxxx',
+          email: 'regina@company.com',
+          gmb: 'https://goo.gl/maps/example'
+        },
+        {
+          id: 'london',
+          name: 'London',
+          region: 'UK',
+          status: 'inactive',
+          address: 'xxx xyz Street, London, United Kingdom',
+          whatsapp: '+44 xx xxxx xxxx',
+          email: 'london@company.com',
+          gmb: 'https://goo.gl/maps/example'
+        }
       ]
+    }
+  },
+  computed: {
+    activeLocations() {
+      return this.locations.filter(loc => loc.status === 'active');
+    },
+    inactiveLocations() {
+      return this.locations.filter(loc => loc.status === 'inactive');
     }
   },
   methods: {
@@ -818,5 +963,141 @@ export default {
 .cta-info {
   font-size: 0.875rem;
   color: #9ca3af;
+}
+
+.locations-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.section-header {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #333;
+}
+
+.locations-category {
+  margin-bottom: 80px;
+}
+
+.category-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.location-card {
+  border: 2px solid #000;
+  padding: 40px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.location-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.location-region {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.location-info {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+}
+
+.location-content {
+  flex: 1;
+}
+
+.location-content p,
+.location-content a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.location-content a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.coming-soon .location-card {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .locations-section {
+    padding: 40px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .location-card {
+    padding: 24px;
+  }
 }
 </style>

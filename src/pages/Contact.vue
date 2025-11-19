@@ -9,14 +9,16 @@
           <span class="info-icon"><i class="bi bi-envelope-at"></i></span>
           <div>
             <h3>Email</h3>
-            <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a>
+              <p>Pakistan: <a href="mailto:shaheersiddiqi20@gmail.com">shaheersiddiqi20@gmail.com</a></p>
+              <p>Portugal: <a href="mailto:sidddigitlmarketingagency@gmail.com">sidddigitlmarketingagency@gmail.com</a></p>
           </div>
         </div>
         <div class="info-item">
           <span class="info-icon"><i class="bi bi-telephone-inbound"></i></span>
           <div>
             <h3>Phone</h3>
-            <a href="tel:+923078485757">+92 (307) 848-5757</a>
+              <p>Pakistan: <a href="https://wa.me/923078485757">+92 (307) 848-5757</a></p>
+              <p>Portugal: <a href="https://wa.me/351963953931">+351 963 953 931</a></p>
           </div>
         </div>
       </div>
